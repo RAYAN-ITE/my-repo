@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <cmath>
+
+
+using namespace std ;
+
+
+int main () 
+{ int a[3][3]={
+           {1,2,3},
+           {4,5,6},
+           {7,8,9}
+                   };
+   int s,n=1;
+   
+   for (size_t i = 0; i < 3; i++)
+{
+   for (size_t  j= 0; j < 3; j++)
+   {
+     if(i==1){
+     j=n+j;
+     n++;
+     }
+    s=a[i][j];
+    a[i][j]=a[j][i];
+    a[j][i]=s;
+
+   }
+   
+}
+for (size_t i = 0; i < 3; i++)
+{
+   for (size_t  j= 0; j < 3; j++)
+   {
+      
+      cout<<a[i][j]<<" ";
+   }
+   cout<<endl;
+}
+
+ 
+ 
+ 
+
+    return 0;
+}
